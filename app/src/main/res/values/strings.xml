@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dialogs Test App</string>
+
+    <string name="dialog_title">Hello</string>
+    <string name="dialog_message">Are you OK %1$s?</string>
+    <string name="dialog_positive_button">yes</string>
+    <string name="dialog_negative_button">no</string>
+
+    <string name="user_ok_msg_good">Good to Know</string>
+    <string name="user_ok_msg_bad">Oh Dear</string>
+
+</resources>

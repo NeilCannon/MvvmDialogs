@@ -1,0 +1,3 @@
+# this enables mockito's mocking of final classes
+# https://github.com/mockito/mockito/wiki/What%27s-new-in-Mockito-2#unmockable
+mock-maker-inline
