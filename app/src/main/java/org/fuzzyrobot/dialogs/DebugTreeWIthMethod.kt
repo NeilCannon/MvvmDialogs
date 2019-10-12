@@ -4,13 +4,6 @@ import android.os.Build
 import timber.log.Timber
 import java.util.regex.Pattern
 
-/**
- * Unily
- *
- * Created neil on 03/01/2018.
- * Copyright © 2017 Brightstarr. All rights reserved.
- */
-
 /* a small mod to Timber.DebugTree that logs method name as well as class
  * so:
  * Timber.d("value is %d", value)
@@ -35,7 +28,7 @@ open class DebugTreeWIthMethod : Timber.DebugTree() {
             Timber.uprootAll()
 
             // send Timber logging to stdout
-            Timber.plant(object: DebugTreeWIthMethod() {
+            Timber.plant(object : DebugTreeWIthMethod() {
                 override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
                     println("$tag $message")
                 }

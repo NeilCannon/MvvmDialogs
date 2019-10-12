@@ -15,7 +15,8 @@ interface StringValue : Parcelable {
     companion object {
         fun of(@StringRes id: Int?): StringValue? = if (id == null) null else ResourceIdValue(id)
         fun of(@StringRes id: Int): StringValue = ResourceIdValue(id)
-        fun of(value: CharSequence?): StringValue? = if (value == null) null else CharsValue(value.toString())
+        fun of(value: CharSequence?): StringValue? =
+            if (value == null) null else CharsValue(value.toString())
 
     }
 

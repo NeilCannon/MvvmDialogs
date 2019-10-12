@@ -8,5 +8,6 @@
 
     <string name="user_ok_msg_good">Good to Know</string>
     <string name="user_ok_msg_bad">Oh Dear</string>
+    <string name="show_dialog_button_text">Show Dialog</string>
 
 </resources>

@@ -24,7 +24,8 @@ data class DialogArgs(
         @StyleRes style: Int = 0
     ) : this(
         StringValue.of(title),
-        StringValue.of(message), positive, negative, cancelable, style)
+        StringValue.of(message), positive, negative, cancelable, style
+    )
 
 
 }

@@ -9,7 +9,7 @@ open class AlertDialogBuilderFactory {
         AlertDialog.Builder(context, style)
 }
 
-open class DialogPopulator(val builderFactory: AlertDialogBuilderFactory = AlertDialogBuilderFactory()) {
+open class DialogPopulator(private val builderFactory: AlertDialogBuilderFactory = AlertDialogBuilderFactory()) {
 
     fun populate(dialogFragment: SimpleAlertDialogFragment<*>, args: DialogArgs): AlertDialog? {
         val builder = builderFactory.create(dialogFragment.requireContext(), args.style)

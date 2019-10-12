@@ -11,8 +11,8 @@ import javax.inject.Inject
 
 class UserFragment @Inject constructor() : Fragment(R.layout.fragment_user) {
 
-    val areYouOkDialogViewModel: AreYouOkDialogFragment.AreYouOkViewModel by activityViewModels()
-    val okViewModel: UserViewModel by activityViewModels()
+    private val areYouOkDialogViewModel: AreYouOkDialogFragment.AreYouOkViewModel by activityViewModels()
+    private val okViewModel: UserViewModel by activityViewModels()
 
     @Inject
     lateinit var notifier: Notifier
@@ -29,7 +29,8 @@ class UserFragment @Inject constructor() : Fragment(R.layout.fragment_user) {
         }
 
         okViewModel.userIsOk.observe(this) {
-            val message = if (it) getString(R.string.user_ok_msg_good) else getString(R.string.user_ok_msg_bad)
+            val message =
+                if (it) getString(R.string.user_ok_msg_good) else getString(R.string.user_ok_msg_bad)
             notifier(requireContext(), message)
         }
 

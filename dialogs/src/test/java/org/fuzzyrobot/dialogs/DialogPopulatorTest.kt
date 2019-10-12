@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 internal class DialogPopulatorTest {
 
-    val context = mock<Context> { }
+    private val context = mock<Context> { }
 
     val dialogFragment = mock<SimpleAlertDialogFragment<*>> {
         on { requireContext() } doReturn context

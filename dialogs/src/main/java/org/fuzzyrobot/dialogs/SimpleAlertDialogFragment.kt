@@ -1,11 +1,8 @@
 package org.fuzzyrobot.dialogs
 
-import android.app.AlertDialog
 import android.app.Dialog
-import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
-import androidx.annotation.StyleRes
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
@@ -13,9 +10,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 
-inline fun <reified VM : ViewModel> FragmentActivity.getViewModel() = ViewModelProvider(this).get<VM>()
+inline fun <reified VM : ViewModel> FragmentActivity.getViewModel() =
+    ViewModelProvider(this).get<VM>()
 
-abstract class SimpleAlertDialogFragment<VM>(val dialogPopulator: DialogPopulator = DialogPopulator()) :
+abstract class SimpleAlertDialogFragment<VM>(private val dialogPopulator: DialogPopulator = DialogPopulator()) :
     DialogFragment() {
 
     companion object {

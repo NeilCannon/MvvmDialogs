@@ -1,2 +1,2 @@
 include ':app', ':dialogs'
-rootProject.name='Dialogs Test App'
+rootProject.name = 'Dialogs Test App'

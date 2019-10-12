@@ -4,15 +4,18 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentFactory
-import dagger.*
+import dagger.Binds
+import dagger.BindsInstance
+import dagger.Component
+import dagger.Module
 import timber.log.Timber
 import javax.inject.Singleton
 
 @Module
 interface MainModule {
 
-    @Binds fun bindNotifier(toaster: Toaster): Notifier
+    @Binds
+    fun bindNotifier(toaster: Toaster): Notifier
 
 }
 

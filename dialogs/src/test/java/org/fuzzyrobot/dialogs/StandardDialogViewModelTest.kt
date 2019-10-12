@@ -34,7 +34,12 @@ class StandardDialogViewModelTest {
 
         verify(positiveObserver).onChanged(Event(Unit))
         verify(userChoiceObserver).onChanged(Event(true))
-        verifyNoMoreInteractions(positiveObserver, negativeObserver, cancelledObserver, userChoiceObserver)
+        verifyNoMoreInteractions(
+            positiveObserver,
+            negativeObserver,
+            cancelledObserver,
+            userChoiceObserver
+        )
     }
 
     @Test
@@ -46,7 +51,12 @@ class StandardDialogViewModelTest {
 
         verify(negativeObserver).onChanged(Event(Unit))
         verify(userChoiceObserver).onChanged(Event(false))
-        verifyNoMoreInteractions(positiveObserver, negativeObserver, cancelledObserver, userChoiceObserver)
+        verifyNoMoreInteractions(
+            positiveObserver,
+            negativeObserver,
+            cancelledObserver,
+            userChoiceObserver
+        )
     }
 
     @Test
@@ -57,7 +67,12 @@ class StandardDialogViewModelTest {
 
         verify(cancelledObserver).onChanged(Event(Unit))
         verify(userChoiceObserver).onChanged(Event(false))
-        verifyNoMoreInteractions(positiveObserver, negativeObserver, cancelledObserver, userChoiceObserver)
+        verifyNoMoreInteractions(
+            positiveObserver,
+            negativeObserver,
+            cancelledObserver,
+            userChoiceObserver
+        )
     }
 
 

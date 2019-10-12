@@ -1,7 +1,5 @@
 package org.fuzzyrobot.dialogs
 
-import timber.log.Timber
-
 open class StandardDialogViewModel : BaseViewModel() {
     val positive: LiveEvent<Unit> = MutableLiveEvent()
     val negative: LiveEvent<Unit> = MutableLiveEvent()

@@ -29,7 +29,7 @@ inline fun <reified F : Fragment> showDialog(
             context.classLoader,
             clazz.canonicalName!!
         ) as DialogFragment
-    dialogArgs?.let {
+    dialogArgs.let {
         dialogFragment.arguments = SimpleAlertDialogFragment.bundleOf(dialogArgs)
     }
     dialogFragment.show(fragmentManager, null)
