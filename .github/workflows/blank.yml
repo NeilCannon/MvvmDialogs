@@ -14,3 +14,5 @@ jobs:
       with:
         entrypoint: ./gradlew
         args: testDebug
+    - name: Report
+      uses: asadmansr/android-test-report-action@master
