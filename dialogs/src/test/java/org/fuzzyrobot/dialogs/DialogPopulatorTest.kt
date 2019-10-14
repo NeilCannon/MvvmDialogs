@@ -21,7 +21,7 @@ internal class DialogPopulatorTest {
     }
 
     val builderFactory = mock<AlertDialogBuilderFactory> {
-        on { create(eq(context), any()) } doReturn builder
+        on { invoke(eq(context), any()) } doReturn builder
     }
 
     val populator = DialogPopulator(builderFactory)
@@ -32,7 +32,7 @@ internal class DialogPopulatorTest {
 
         populator.populate(dialogFragment, args)
 
-        verify(builderFactory).create(context, args.style)
+        verify(builderFactory)(context, args.style)
         verify(builder).setPositiveButton(eq(android.R.string.ok), any())
         verify(builder).create()
         verify(alertDialog).setCanceledOnTouchOutside(true)
@@ -51,7 +51,7 @@ internal class DialogPopulatorTest {
 
         populator.populate(dialogFragment, args)
 
-        verify(builderFactory).create(context, args.style)
+        verify(builderFactory)(context, args.style)
         verify(builder).setTitle("title")
         verify(builder).setMessage("message")
         verify(builder).setPositiveButton(eq(1), any())

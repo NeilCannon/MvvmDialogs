@@ -50,17 +50,9 @@ fun <T> LiveData<Event<T>>.observeEventForever(observer: (T) -> Unit) {
 }
 
 fun LiveData<Event<Unit>>.observeEventForever(observer: () -> Unit) {
-    observeForever {
-        it?.getContentIfNotHandled()?.let {
-            observer()
-        }
+    observeEventForever { _ ->
+        observer()
     }
-}
-
-fun <T> LiveData<T>.observe(owner: LifecycleOwner, observer: (T) -> Unit) {
-    observe(owner, Observer<T> {
-        observer(it!!)
-    })
 }
 
 fun <T> LiveData<T>.first(): LiveData<T> {

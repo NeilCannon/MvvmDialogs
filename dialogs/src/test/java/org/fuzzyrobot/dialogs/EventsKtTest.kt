@@ -3,6 +3,7 @@ package org.fuzzyrobot.dialogs
 import androidx.arch.core.executor.ArchTaskExecutor
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import com.nhaarman.mockitokotlin2.inOrder
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
@@ -18,6 +19,21 @@ class EventsKtTest {
     @Before
     fun setUp() {
         ArchTaskExecutor.getInstance().setDelegate(FauxMainThreadExecutor)
+    }
+
+    @Test
+    fun observeEventForever() {
+        val x = MutableLiveEvent<Int>()
+        val observer = mock<(Int) -> Unit> {}
+        x.observeEventForever(observer)
+        x.value = Event(1)
+        x.value = Event(20)
+
+        inOrder(observer) {
+            verify(observer).invoke(1)
+            verify(observer).invoke(20)
+        }
+        verifyNoMoreInteractions(observer)
     }
 
     @Test

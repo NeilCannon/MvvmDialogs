@@ -26,7 +26,6 @@ interface StringValue : Parcelable {
 
 @Parcelize
 private data class CharsValue(val str: String) : StringValue {
-
     override fun use(fInt: (Int) -> Unit, fChars: (CharSequence) -> Unit) {
         fChars(str)
     }
@@ -34,7 +33,6 @@ private data class CharsValue(val str: String) : StringValue {
 
 @Parcelize
 private data class ResourceIdValue(val id: Int) : StringValue {
-
     override fun use(fInt: (Int) -> Unit, fChars: (CharSequence) -> Unit) {
         fInt(id)
     }

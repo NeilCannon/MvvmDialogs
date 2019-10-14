@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.observe
 import kotlinx.android.synthetic.main.fragment_user.*
 import timber.log.Timber
 import javax.inject.Inject
@@ -19,8 +20,6 @@ class UserFragment @Inject constructor() : Fragment(R.layout.fragment_user) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.d("-")
-
         super.onCreate(savedInstanceState)
         injector.inject(this)
 
