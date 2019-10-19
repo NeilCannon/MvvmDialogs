@@ -1,4 +1,4 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import android.app.Activity
 import android.app.Application

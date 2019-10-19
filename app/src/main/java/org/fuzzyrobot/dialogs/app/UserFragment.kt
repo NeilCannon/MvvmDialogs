@@ -1,4 +1,4 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
 import kotlinx.android.synthetic.main.fragment_user.*
+import org.fuzzyrobot.dialogs.observeEvent
 import timber.log.Timber
 import javax.inject.Inject
 

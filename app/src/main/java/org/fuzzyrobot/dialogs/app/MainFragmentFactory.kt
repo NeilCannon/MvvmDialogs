@@ -1,4 +1,4 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory

@@ -1,7 +1,8 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import org.fuzzyrobot.dialogs.BaseViewModel
 
 class UserViewModel : BaseViewModel() {
 

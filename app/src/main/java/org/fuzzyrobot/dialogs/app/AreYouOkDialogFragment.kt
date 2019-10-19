@@ -1,7 +1,11 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import android.content.res.Resources
 import androidx.fragment.app.activityViewModels
+import org.fuzzyrobot.dialogs.DialogArgs
+import org.fuzzyrobot.dialogs.StandardAlertDialogFragment
+import org.fuzzyrobot.dialogs.StandardDialogViewModel
+import org.fuzzyrobot.dialogs.StringValue
 import javax.inject.Inject
 
 class AreYouOkDialogFragment @Inject constructor() : StandardAlertDialogFragment() {

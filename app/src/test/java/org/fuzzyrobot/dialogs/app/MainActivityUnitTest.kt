@@ -1,4 +1,4 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import android.content.Context
 import android.os.Bundle
@@ -7,6 +7,7 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import dagger.*
 import kotlinx.android.synthetic.main.fragment_user.*
+import org.fuzzyrobot.dialogs.*
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -26,12 +27,14 @@ object FakeMainModule {
     @Provides
     @JvmStatic
     @Reusable
-    fun provideMyDialogFragment(): AreYouOkDialogFragment = myDialogFragment
+    fun provideMyDialogFragment(): AreYouOkDialogFragment =
+        myDialogFragment
 
     @Provides
     @JvmStatic
     @Reusable
-    fun provideNotifier(): Notifier = notifier
+    fun provideNotifier(): Notifier =
+        notifier
 
 }
 
@@ -90,7 +93,10 @@ class MainActivityUnitTest {
             verify(FakeMainModule.myDialogFragment).arguments = capture()
             val bundle = firstValue
             assertEquals(
-                AreYouOkDialogFragment.args(activity.resources, "Neil"),
+                AreYouOkDialogFragment.args(
+                    activity.resources,
+                    "Neil"
+                ),
                 bundle[SimpleAlertDialogFragment.FRAGMENT_ARGS_KEY]
             )
         }

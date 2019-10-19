@@ -14,7 +14,7 @@ Example
 -------
 
 ```kotlin
-class SimplestDialogFragment() : StandardAlertDialogFragment() {
+class SimplestDialogFragment : StandardAlertDialogFragment() {
 
     class SimplestViewModel : StandardDialogViewModel()
 
@@ -22,7 +22,7 @@ class SimplestDialogFragment() : StandardAlertDialogFragment() {
 }
 
 
-class UserFragment() : Fragment(R.layout.fragment_user) {
+class UserFragment : Fragment(R.layout.fragment_user) {
 
     private val simplestViewModel: SimplestDialogFragment.SimplestViewModel by activityViewModels()
 

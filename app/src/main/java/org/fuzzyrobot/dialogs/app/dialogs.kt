@@ -1,10 +1,12 @@
-package org.fuzzyrobot.dialogs
+package org.fuzzyrobot.dialogs.app
 
 import android.content.Context
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import org.fuzzyrobot.dialogs.DialogArgs
+import org.fuzzyrobot.dialogs.SimpleAlertDialogFragment
 
 inline fun <reified F : Fragment> Fragment.showDialog(dialogArgs: DialogArgs) {
     val clazz = F::class.java
